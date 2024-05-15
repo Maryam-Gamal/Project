@@ -4,13 +4,12 @@
 #include<QObject>
 #include<QGraphicsRectItem>
 
-class Paddle:public QObject, public QGraphicsPixmapItem
+class Paddle:public QObject, public QGraphicsRectItem
 {
     Q_OBJECT
 public:
-    Paddle(QGraphicsPixmapItem *parent = nullptr);
+    Paddle(QObject *parent = nullptr);
     void keyPressEvent(QKeyEvent*event);
     double paddleCenterX();
 };
-
 #endif // PADDLE_H
